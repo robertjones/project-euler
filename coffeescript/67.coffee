@@ -104,10 +104,7 @@ _ = require 'lodash'
 triangle = (parseInt(c) for c in r.split(' ') for r in text.split('\n'))
 
 pathSum = (prevSums, row) ->
-  unless prevSums.length == 0
     _.map row, (el, idx) -> el + _.max([prevSums[idx], prevSums[idx-1]])
-  else 
-    row
 
 pathSums = _.reduce triangle, pathSum
 
