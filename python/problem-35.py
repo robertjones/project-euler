@@ -2,7 +2,7 @@ import math
 import itertools as it
 
 
-def primes(lim):
+def prime_gen(lim):
     D = {}
     q = 2
     while q < lim:
@@ -17,13 +17,14 @@ def primes(lim):
 
 
 Lim = 10**6
-Potential_factors = list(primes(math.ceil(Lim**(1/2))))
+Primes = list(prime_gen(Lim))
 
 
 def isprime(x):
     return not(any(x % factor == 0
                    for factor
-                   in it.takewhile(lambda n: n < x, Potential_factors)))
+                   in it.takewhile(lambda n: n < math.ceil(x ** (1/2)),
+                                   Primes)))
 
 
 def rotations(num):
@@ -35,4 +36,4 @@ def iscircular(num):
     return all(isprime(rotation) for rotation in rotations(num))
 
 
-print(sum(1 for prime in primes(Lim) if iscircular(prime)))
+print(sum(1 for prime in Primes if iscircular(prime)))
