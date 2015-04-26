@@ -1,5 +1,3 @@
-# WORK IN PROGRESS
-
 import itertools as it
 import math
 
