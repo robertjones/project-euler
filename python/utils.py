@@ -10,9 +10,9 @@ def ispandigital(*nums, pattern=None):
     return sorted(digits) == pattern
 
 
-def pandigital_gen(length):
+def pandigital_gen(hightest_dig, lowest_dig=1):
     return (int("".join(map(str, digs)))
-            for digs in it.permutations(range(length, 0, -1)))
+            for digs in it.permutations(range(hightest_dig, lowest_dig-1, -1)))
 
 
 class Primes:
