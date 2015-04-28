@@ -15,6 +15,13 @@ def pandigital_gen(hightest_dig, lowest_dig=1):
             for digs in it.permutations(range(hightest_dig, lowest_dig-1, -1)))
 
 
+def last(iterable):
+    for item in iterable:
+        current = item
+        prev = current
+    return prev
+
+
 class Primes:
 
     def __init__(self, lim=0):
