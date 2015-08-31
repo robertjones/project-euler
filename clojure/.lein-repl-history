@@ -1,0 +1,8 @@
+(math/lcd 10 20)
+(require '[clojure.math.numeric-tower :as math])
+(math/lcd 10 20)
+(math/lcm 10 20)
+(math/lcm 10 20 30)
+(reduce math/lcm (range 1 11))
+(reduce math/lcm (range 1 21))
+exit
