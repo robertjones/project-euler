@@ -30,3 +30,5 @@
 
 (defn max-path [grid]
   (apply max (reduce path-step (reverse grid))))
+
+(println (max-path (text->grid text)))
