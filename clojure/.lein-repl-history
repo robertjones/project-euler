@@ -118,3 +118,6 @@ acc
 (max-path (text->grid text))
 (slurp "p067.txt")
 (slurp "p067_triangle.txt")
+(require '[clojure.math.numeric-tower :as math])
+(require [clojure.math.numeric-tower :as math])
+(require '[clojure.math.numeric-tower :as math])
